@@ -2,39 +2,56 @@
 
 * {
     margin: 0;
-    padding: 0;    
-    /* text-align: center; retirar depois  */
+    padding: 0;   
 }
 
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;    
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .profile {
     width: 20%;
     background-color: #333;
-    color: #fff;
+    color: #291b1b;
     padding: 20px;
     height: 100vh;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+}
+
+#foto-perfil {
+    display: flex;
+    margin: 0, 50px;
+    flex-direction: column;
+}
+
+#foto-perfil img {
+    margin: 0;
+    max-width: 250px;
+    border-radius: 50%;
+    justify-content: center;
 }
 
 #to-do-list {
     flex: 1;
-    margin: 60px;
+    margin: 20px;
+    margin-top: 100px;
     padding: 20px;
     height: 70vh;
-    box-sizing: border-box;
-    border-radius: 2%;
-    background-color: darkgrey;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+
 
 #titulo {
     text-align: center;
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .lista-container {
@@ -44,78 +61,19 @@ body {
 .lista {
     flex: 1;
     padding: 20px;
-    background-color: #f0f0f0;
-    margin: 5px;
+    padding-top: 0;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.175);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .lista {
-display: flex;
-width: 60%; 
-
-background-color: #e0e0e0;
+.lista h3 {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-#dia {
-    width: 50%;
-    background-color: #f0f0f0;
+ul, li {
+    list-style-type: none;
+    margin-bottom: 10px;
 }
-
-#noite {
-    width: 50%;
-    background-color: #f0f0f0;
-    
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-/* #container {
-    display: flex;
-    justify-content: space-between;
-
-    width: 70%;
-    margin: 50px;
-    gap: 10px;
-    background-color: black;
-}
-
-.profile {
-    background-color: grey;
-    width: 250px;
-    height: 500px;
-}
-
-.lista {
-    background-color: grey;
-    width: 500px;
-    height: 500px;
-} */
