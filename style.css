@@ -15,6 +15,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 85%;
+    height: 790px;
     margin-left: 15%;
 }
 
@@ -22,11 +23,11 @@ body {
   background-color: #FFF;
   border-radius: 8px;
   padding: 20px;
+  height: auto; /* corrigir aqui */
   width: 48%;
   margin: 40px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 h2 {
     margin-bottom: 5px;
@@ -133,10 +134,15 @@ footer {
     background-color: #333;
     color: #F5F5F5;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
+    font-size: 1.2rem;
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {
     text-decoration: none;
-    color: fff;
+    color: #0099FF;
 }
