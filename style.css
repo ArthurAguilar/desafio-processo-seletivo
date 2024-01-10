@@ -100,6 +100,10 @@ select:hover {
   background-color: #DDD;
 }
 
+.checked {
+  text-decoration: line-through;
+}
+
 .btn-acao {
   border: none;
   border-radius: 5px;
@@ -111,13 +115,26 @@ select:hover {
   cursor: pointer;
 }
 
-#btn-edit{
+#btn-edit {
   background-color: orange;
   margin-right: 5px;
 }
 
-#btn-delete{
+#btn-delete {
   background-color: rgba(237, 42, 42, 0.9);
+}
+
+#btn-save {
+  background-color: #0099FF;
+  height: 50px;
+  width: 75px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .barra-lateral {

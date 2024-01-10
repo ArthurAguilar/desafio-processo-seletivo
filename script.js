@@ -51,19 +51,19 @@ function createEditButton(row) {
     return editButton;
 }
 
-// Função para criar o botão de exclusão
+// Botão de exclusão
 function createDeleteButton(row) {
     var deleteButton = document.createElement('button');
     deleteButton.className = 'btn-acao';
-    deleteButton.id = 'btn-delete'; 
+    deleteButton.id = 'btn-delete';
     deleteButton.innerHTML = '<span class="material-symbols-outlined">delete</span>';
     deleteButton.onclick = function() {
-        // Adicione aqui a lógica de exclusão
-        var table = document.getElementById('taskTable');
-        table.deleteRow(row.rowIndex);
+        var table = row.parentNode; // Obtém a tabela a partir da linha
+        table.deleteRow(row.rowIndex); // Remove a linha da tabela
     };
     return deleteButton;
 }
+
 
 // Função para editar uma tarefa
 function editTask(row) {
@@ -75,9 +75,9 @@ function editTask(row) {
 
     var saveButton = document.createElement('button');
     saveButton.textContent = 'Salvar';
-    saveButton.className = 'save-button';
+    saveButton.id = 'btn-save';
 
-    saveButton.addEventListener('click', function() {
+    saveButton.addEventListener('click', function() {   
         taskCell.textContent = editInput.value.trim();
         row.removeChild(saveButton);
     });
@@ -100,11 +100,26 @@ function addEventListeners(row) {
     
     // Adiciona o ouvinte de evento para atualizar a classe quando o valor do menu suspenso é alterado
     statusSelect.addEventListener('change', function() {
-        row.classList.toggle('checked', this.value === 'concluída');
+        var isChecked = this.value === 'concluída';
+
+        // Atualiza a classe "checked" na linha
+        row.classList.toggle('checked', isChecked);
+
+        // Adicione o código aqui para realizar ações específicas quando a tarefa é marcada como concluída
+        if (isChecked) {
+            // alert("Tarefa concluída!");
+        }
     });
 }
 
 // Adiciona os ouvintes de eventos para as linhas existentes ao carregar a página
-document.querySelectorAll('.statusSelect').forEach(function(selectElement) {
-    addEventListeners(selectElement.closest('tr'));
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.statusSelect').forEach(function(selectElement) {
+        var row = selectElement.closest('tr');
+        addEventListeners(row);
+
+        // Atualiza a classe "checked" com base no valor inicial do status
+        var initialStatus = selectElement.value === 'concluída';
+        row.classList.toggle('checked', initialStatus);
+    });
 });
