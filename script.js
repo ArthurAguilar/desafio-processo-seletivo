@@ -1,11 +1,11 @@
-function addTask() {
+function addTask(inputId, tableId) {
     // Obtém o valor do input
-    var taskText = document.getElementsByClassName('add-task"').value;
+    var taskText = document.getElementById(inputId).value;
 
     // Verifica se o input não está vazio
     if (taskText.trim() !== '') {
         // Cria uma nova linha na tabela
-        var table = document.getElementById('taskTable');
+        var table = document.getElementById(tableId);
         var newRow = table.insertRow(table.rows.length);
 
         // Cria células na nova linha
@@ -36,7 +36,7 @@ function addTask() {
     }
 
     // Limpa o input
-    document.getElementById('taskInput').value = '';
+    document.getElementById(inputId).value = '';
 }
 
 // Função para criar o botão de edição
