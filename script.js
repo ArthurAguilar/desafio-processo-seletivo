@@ -46,6 +46,23 @@ function addTask(inputId, tableId) {
     document.getElementById(inputId).value = '';
 }
 
+// Adiciona o ouvinte de eventos para o campo de entrada (input) do período "DIA"
+document.getElementById('taskInputDia').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        e.preventDefault(); // Impede a ação padrão do formulário
+        addTask('taskInputDia', 'taskTableDia'); // Chama a função addTask novamente
+    }
+});
+
+// Adiciona o ouvinte de eventos para o campo de entrada (input) do período "NOITE"
+document.getElementById('taskInputNoite').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        e.preventDefault(); // Impede a ação padrão do formulário
+        addTask('taskInputNoite', 'taskTableNoite'); // Chama a função addTask novamente
+    }
+});
+
+
 // Função para criar o botão de edição
 function createEditButton(row) {
     var editButton = document.createElement('button');
