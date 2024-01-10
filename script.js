@@ -1,6 +1,6 @@
 function addTask() {
     // Obtém o valor do input
-    var taskText = document.getElementById('taskInput').value;
+    var taskText = document.getElementsByClassName('add-task"').value;
 
     // Verifica se o input não está vazio
     if (taskText.trim() !== '') {
