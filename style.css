@@ -7,6 +7,8 @@
   font-family: 'Urbanist', sans-serif;
 }
 
+
+
 body {
   background-color: #0099FF;
 }
@@ -66,6 +68,18 @@ button.enviar {
   cursor: pointer;
 }
 
+button.save-button {
+  background-color: #0099FF;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -87,6 +101,7 @@ tr:nth-child(even){
 }
 
 select {
+  text-align: center;
   width: 100%;
   border: none;
   padding: 10px;
@@ -98,6 +113,10 @@ select {
 
 select:hover {
   background-color: #DDD;
+}
+
+.checked {
+  text-decoration: line-through;
 }
 
 .btn-acao {

@@ -19,10 +19,10 @@
             <div class="to-do-list" id="dia">
                 <h2>DIA</h2>
                 <form class="add-form">
-                    <input type="text" placeholder="Adicionar tarefa" class="add-task">
-                    <button class="enviar" type="submit">+</button>
+                    <input type="text" placeholder="Adicionar tarefa" class="add-task" id="taskInput">
+                    <button class="enviar" type="button" onclick="addTask()">+</button>
                 </form>
-                <table>
+                <table id="taskTable">
                     <thead>
                         <tr>
                             <th>Tarefa</th>
@@ -34,7 +34,7 @@
                         <tr>
                             <td>Arrumar cama</td>
                             <td>
-                                <select>
+                                <select class="statusSelect">
                                     <option value="pendente">pendente</option>
                                     <option value="em andamento">em andamento</option>
                                     <option value="concluída">concluída</option>
@@ -47,19 +47,19 @@
                                 <button class="btn-acao" id="btn-delete">
                                     <span class="material-symbols-outlined">delete</span>
                                 </button>
-                            </td
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         
             <div class="to-do-list" id="noite">
-                <h2>Noite</h2>
+                <h2>NOITE</h2>
                 <form class="add-form">
-                    <input type="text" placeholder="Adicionar tarefa" class="add-task">
-                    <button class="enviar" type="submit">+</button>
+                    <input type="text" placeholder="Adicionar tarefa" class="add-task" id="taskInput">
+                    <button class="enviar" type="button" onclick="addTask()">+</button>
                 </form>
-                <table>
+                <table id="taskTable">
                     <thead>
                         <tr>
                             <th>Tarefa</th>
@@ -69,16 +69,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Estudar JS</td>
+                            <td>Academia</td>
                             <td>
-                                <select>
+                                <select class="statusSelect">
                                     <option value="pendente">pendente</option>
                                     <option value="em andamento">em andamento</option>
                                     <option value="concluída">concluída</option>
                                 </select>
                                 </td>
                             <td>
-                                
                                 <button class="btn-acao" id="btn-edit">
                                     <span class="material-symbols-outlined">edit</span>
                                 </button>
@@ -87,7 +86,6 @@
                                 </button>
                             </td>
                         </tr>
-                        
                     </tbody>
                 </table>
             </div>
@@ -98,6 +96,7 @@
         </p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
