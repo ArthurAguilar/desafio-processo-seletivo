@@ -33,6 +33,13 @@ function addTask(inputId, tableId) {
 
         // Adiciona os ouvintes de eventos para a nova linha
         addEventListeners(newRow);
+        
+        document.getElementById(inputId).addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault(); // Impede a ação padrão do formulário
+                addTask(inputId, tableId); // Chama a função addTask novamente
+            }
+        });
     }
 
     // Limpa o input
