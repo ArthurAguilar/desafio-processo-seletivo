@@ -148,8 +148,6 @@ select:hover {
 }
 
 footer {
-    width: 85%;
-    margin-left: 15%;
     background-color: #333;
     color: #F5F5F5;
     text-align: center;
@@ -158,6 +156,7 @@ footer {
     margin-top: auto;
     position: fixed;
     bottom: 0;
+    width: 100%;
 }
 
 footer a {

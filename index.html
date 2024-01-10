@@ -29,18 +29,35 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                        <tr>
+                            <td>Arrumar cama</td>
+                            <td>
+                                <select class="statusSelect">
+                                    <option value="pendente">pendente</option>
+                                    <option value="em andamento">em andamento</option>
+                                    <option value="concluída">concluída</option>
+                                </select>
+                                </td>
+                            <td>
+                                <button class="btn-acao" id="btn-edit">
+                                    <span class="material-symbols-outlined">edit</span>
+                                </button>
+                                <button class="btn-acao" id="btn-delete">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         
             <div class="to-do-list" id="noite">
-                <h2>Noite</h2>
+                <h2>NOITE</h2>
                 <form class="add-form">
                     <input type="text" placeholder="Adicionar tarefa" class="add-task" id="taskInput">
                     <button class="enviar" type="button" onclick="addTask()">+</button>
                 </form>
-                <table>
+                <table id="taskTable">
                     <thead>
                         <tr>
                             <th>Tarefa</th>
@@ -50,7 +67,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Estudar JS</td>
+                            <td>Academia</td>
                             <td>
                                 <select class="statusSelect">
                                     <option value="pendente">pendente</option>
@@ -59,7 +76,6 @@
                                 </select>
                                 </td>
                             <td>
-                                
                                 <button class="btn-acao" id="btn-edit">
                                     <span class="material-symbols-outlined">edit</span>
                                 </button>
@@ -68,7 +84,6 @@
                                 </button>
                             </td>
                         </tr>
-                        
                     </tbody>
                 </table>
             </div>
@@ -78,6 +93,7 @@
             Criado por <a href="https://www.linkedin.com/in/arthuraguilar/">Arthur Aguilar</a> para o desafio da Aceleradora Ágil: 2ª Fase Processo Seletivo
         </p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 
