@@ -13,7 +13,7 @@ body {
 
 .barra-lateral {
   width: 15%;
-  background-color: #333;
+  background-color: #24344B;
   color: #FFF;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
@@ -58,7 +58,6 @@ body {
   color: #0099FF;
   text-decoration: none;
 }
-
 
 .container-to-do {
     display: flex;
@@ -187,7 +186,7 @@ select:hover {
 }
 
 footer {
-    background-color: #333;
+    background-color: #24344B;
     color: #F5F5F5;
     text-align: center;
     padding: 5px;
@@ -195,7 +194,9 @@ footer {
     margin-top: auto;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    margin-left: 15%;
+    width: 85%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
 footer a {
