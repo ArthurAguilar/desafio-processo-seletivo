@@ -1,48 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tarefas</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <title>Lista de Tarefas</title>
 </head>
 <body>
-    <div class="profile">
-        <div id="foto-perfil"><img src="imagens/foto-perfil.avif" alt="foto-perfil"></div>
-        <h3>Arthur Aguilar</h3>
-    </div>
-
-    <div id="to-do-list">
-        <div id="titulo">
-            <h2>Lista de Tarefas</h2>
+    <main>
+        <div class="barra-lateral">
+            <h2>Perfil</h2>
         </div>
+        <div class="container-to-do">
+        
+            <div class="to-do-list" id="dia">
+                <h2>DIA</h2>
+                <form class="add-form">
+                    <input type="text" placeholder="Adicionar tarefa" class="add-task">
+                    <button class="enviar" type="submit">+</button>
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tarefa</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Arrumar cama</td>
+                            <td>
+                                <select>
+                                    <option value="pendente">pendente</option>
+                                    <option value="em andamento">em andamento</option>
+                                    <option value="concluída">concluída</option>
+                                </select>
+                                </td>
+                            <td>
+                                <button class="btn-acao" id="btn-edit">
+                                    <span class="material-symbols-outlined">edit</span>
+                                </button>
+                                <button class="btn-acao" id="btn-delete">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </td
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="to-do-list" id="noite">
+                <h2>Noite</h2>
+                <form class="add-form">
+                    <input type="text" placeholder="Adicionar tarefa" class="add-task">
+                    <button class="enviar" type="submit">+</button>
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tarefa</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Estudar JS</td>
+                            <td>
+                                <select>
+                                    <option value="pendente">pendente</option>
+                                    <option value="em andamento">em andamento</option>
+                                    <option value="concluída">concluída</option>
+                                </select>
+                                </td>
+                            <td>
+                                
+                                <button class="btn-acao" id="btn-edit">
+                                    <span class="material-symbols-outlined">edit</span>
+                                </button>
+                                <button class="btn-acao" id="btn-delete">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+    </main>
+    <footer>
+        <p>
+            Criado por <a href="https://www.linkedin.com/in/arthuraguilar/">Arthur Aguilar</a> para o desafio da Aceleradora Ágil: 2ª Fase Processo Seletivo
+        </p>
+    </footer>
 
-        <div class="lista-container">
-            
-            <div class="lista">
-                <h3>Dia</h3>
-                <ul>
-                    <li>Tarefa 1 do Dia</li>
-                    <li>Tarefa 2 do Dia</li>
-                    <li>Tarefa 1 do Dia</li>
-                    <li>Tarefa 2 do Dia</li>
-                    <li>Tarefa 1 do Dia</li>
-                    <li>Tarefa 2 do Dia</li>
-                </ul>       
-            </div>
-            <div class="lista">
-                <h3>Noite</h3>
-                <ul>
-                    <li>Tarefa 1 da Noite</li>
-                    <li>Tarefa 2 da Noite</li>
-                    <li>Tarefa 1 do Noite</li>
-                    <li>Tarefa 2 do Noite</li>
-                    <li>Tarefa 1 do Noite</li>
-                    <li>Tarefa 2 do Noite</li>
-                </ul>
-            </div>
-            
-        </div>  
-    </div>        
 </body>
+
 </html>
