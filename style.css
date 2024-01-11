@@ -9,6 +9,7 @@
 
 body {
   background-color: #0099ffda;
+  overflow: hidden;
 }
 
 .barra-lateral {
@@ -75,6 +76,14 @@ body {
     height: 100vh;
     width: 85%;
     margin-left: 15%;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-left: 23.5%;
+  padding-top: 70px;
+  margin-bottom: -105px;
 }
 
 .to-do-list {
