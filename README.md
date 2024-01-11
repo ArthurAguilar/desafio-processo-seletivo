@@ -1,7 +1,7 @@
 # desafio-aceleradora-agil
  Desafio para processo seletivo da Aceleradora Ágil
  
- > https://arthuraguilar.github.io/desafio-aceleradora-agil/ 
+https://arthuraguilar.github.io/desafio-aceleradora-agil/ 
 
 Este desafio me pegou de surpresa. Quando eu vi o que seria, não imaginei que passaria alguns maus bocados kkkk.
 
