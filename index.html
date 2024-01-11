@@ -6,11 +6,12 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <title>Lista de Tarefas</title>
+  <script src="script.js"></script>
 </head>
 <body>
     <main>
         <div class="barra-lateral">
-            <img src="imagens/foto-perfil.avif" alt="foto-perfil">
+            <img src="imagens/empty-profile.jpg" alt="foto-perfil">
             <h2>Arthur Aguilar</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam tempora modi exercitationem error, debitis, expedita quaerat id asperiores iusto quis at dolore natus necessitatibus, corrupti dolorem commodi beatae saepe ducimus.
@@ -26,7 +27,7 @@
         <div class="container-to-do">
         
             <div class="to-do-list" id="dia">
-                <h2>DIA</h2>
+                <h2>DIA<img src="imagens/sol.png" alt="imagem-sol"></h2>
                 <form class="add-form">
                     <input type="text" placeholder="Adicionar tarefa" class="add-task" id="taskInputDia">
                     <button class="enviar" type="button" onclick="addTask('taskInputDia', 'taskTableDia')">+</button>
@@ -43,7 +44,7 @@
             </div>
         
             <div class="to-do-list" id="noite">
-                <h2>Noite</h2>
+                <h2>Noite <img src="imagens/lua.png" alt=""></h2>
                 <form class="add-form">
                     <input type="text" placeholder="Adicionar tarefa" class="add-task" id="taskInputNoite">
                     <button class="enviar" type="button" onclick="addTask('taskInputNoite', 'taskTableNoite')">+</button>
@@ -58,8 +59,11 @@
                     </thead>
                 </table>
             </div>
+
         </div>
+
     </main>
+    
     <footer>
         <p>
             Criado por <a href="https://www.linkedin.com/in/arthuraguilar/" target="_blank">Arthur Aguilar</a> para o desafio da Aceleradora Ágil: 2ª Fase Processo Seletivo
