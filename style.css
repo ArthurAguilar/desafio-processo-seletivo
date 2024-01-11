@@ -90,7 +90,7 @@ body {
 
 .to-do-list h2 {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .to-do-list h2 img {
@@ -102,7 +102,7 @@ body {
   display: flex;
   width: 100%;
   gap: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 input {
