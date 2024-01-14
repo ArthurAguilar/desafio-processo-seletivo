@@ -16,4 +16,4 @@ Acredito que por ser meu primeiro desafio técnico, acabei perdendo atenção em
    * Depois de muitas pesquisas, percebi o erro bobo cometido. Estava usando um único "ID" pra duas listas e tava rolando conflito na hora da função chamar;
      
 * Após resolvido a questão da lista da noite, eu me senti tão satisfeito que coloquei mais um botão, que foi o de 'editar', para alterar o nome da tarefa.
-  * Aqui estou com um pequeno bug que, mesmo clicando fora do botão 'salvar', a alteração do nome é salva. 
+  * Aqui estou com um pequeno bug. A função foi criada com a intenção de, quando clicar fora do botão salvar, o script entender como 'cancelar função', porém quando clica na barra para alterar acaba fechando tbm. 

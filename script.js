@@ -76,27 +76,40 @@ function createDeleteButton(row) {
     return deleteButton;
 }
 
-
 // EDITAR TAREFA
 function editTask(row) {
+    event.stopPropagation();
     var taskCell = row.cells[0];
+    console.log("Quantas vezes eu passei aqui?\n")
 
     var editInput = document.createElement('input');
     editInput.type = 'text';
-    editInput.value = taskCell.textContent.trim();
+    editInput.value = taskCell.textContent;
+    sameValue =  taskCell.textContent;
 
     var saveButton = document.createElement('button');
     saveButton.textContent = 'Salvar';
     saveButton.id = 'btn-save';
 
-    saveButton.addEventListener('click', function() {   
-        taskCell.textContent = editInput.value.trim();
-        row.removeChild(saveButton);
+    saveButton.addEventListener('click', function(event) {
+        event.stopPropagation();
+        if (event.target.id == "btn-save") {
+            taskCell.textContent = editInput.value.trim();
+            event.target.remove();
+            console.log("Texto alterado com sucesso");
+        }
     });
 
-    editInput.addEventListener('blur', function() {
-        taskCell.textContent = editInput.value.trim();
-        row.removeChild(saveButton);
+    document.addEventListener('click', function(event) {
+        event.stopPropagation();
+        if (event.target.id != "btn-save") {
+            taskCell.textContent = sameValue;
+            var elementoParaRemover = document.getElementById('btn-save');
+            if (elementoParaRemover) {
+                elementoParaRemover.parentNode.removeChild(elementoParaRemover);
+            }
+            console.log("Não deveria estar aqui");
+        }
     });
 
     taskCell.innerHTML = '';
